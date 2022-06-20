@@ -1,47 +1,62 @@
-[
-  {
-    "id": 1,
-    "first_name": "Yancy",
-    "last_name": "D'Alesco",
-    "email": "ydalesco0@cbslocal.com",
-    "gender": "Genderfluid",
-    "ip_address": "164.215.194.36",
-    "age": 65
-  },
-  {
-    "id": 2,
-    "first_name": "Theresita",
-    "last_name": "Drever",
-    "email": "tdrever1@sphinn.com",
-    "gender": "Bigender",
-    "ip_address": "215.180.187.101",
-    "age": 95
-  },
-  {
-    "id": 3,
-    "first_name": "Kacie",
-    "last_name": "Clarke",
-    "email": "kclarke2@live.com",
-    "gender": "Bigender",
-    "ip_address": "249.59.214.95",
-    "age": 63
-  },
-  {
-    "id": 4,
-    "first_name": "Hinze",
-    "last_name": "Tubritt",
-    "email": "htubritt3@amazon.de",
-    "gender": "Genderfluid",
-    "ip_address": "219.8.220.31",
-    "age": 13
-  },
-  {
-    "id": 5,
-    "first_name": "Herta",
-    "last_name": "Scutter",
-    "email": "hscutter4@sohu.com",
-    "gender": "Genderqueer",
-    "ip_address": "211.49.14.77",
-    "age": 52
-  }
-]
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Yancy",
+      "last_name": "D'Alesco",
+      "email": "ydalesco0@cbslocal.com",
+      "gender": "Genderfluid",
+      "ip_address": "164.215.194.36",
+      "age": 65
+    },
+    {
+      "id": 2,
+      "first_name": "Theresita",
+      "last_name": "Drever",
+      "email": "tdrever1@sphinn.com",
+      "gender": "Bigender",
+      "ip_address": "215.180.187.101",
+      "age": 95
+    },
+    {
+      "id": 3,
+      "first_name": "Kacie",
+      "last_name": "Clarke",
+      "email": "kclarke2@live.com",
+      "gender": "Bigender",
+      "ip_address": "249.59.214.95",
+      "age": 63
+    },
+    {
+      "id": 4,
+      "first_name": "Hinze",
+      "last_name": "Tubritt",
+      "email": "htubritt3@amazon.de",
+      "gender": "Genderfluid",
+      "ip_address": "219.8.220.31",
+      "age": 13
+    },
+    {
+      "id": 5,
+      "first_name": "Herta",
+      "last_name": "Scutter",
+      "email": "hscutter4@sohu.com",
+      "gender": "Genderqueer",
+      "ip_address": "211.49.14.77",
+      "age": 52
+    },
+    {
+      "query": "\n    query IntrospectionQuery {\n      __schema {\n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+      "id": 6
+    },
+    {
+      "first_name": "Ajay",
+      "last_name": "Maurya",
+      "email": "ydalesco0@cbslocal.com",
+      "gender": "Genderfluid",
+      "ip_address": "164.215.194.36",
+      "age": 65,
+      "id": 7
+    }
+  ]
+}
